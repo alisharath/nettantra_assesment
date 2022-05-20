@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="validator.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Nettantra</title>
+  </head>
+  <body>
+    <div
+      class="container"
+      style="border: solid; border-radius: 5px; width: auto; height: auto"
+    >
+      <div class="jumbotron" style="background-color: rgb(155, 201, 234);">
+        <form action="3rd_page.html" method="post" class="form" action="2nd_page.html">
+          <div class="form-group">
+            <div class="container">
+            <div class="row">
+             <div class="col-md-6">
+              <label for=""><b>HSC Institution Name</b></label>
+          
+              <input type="text" class="form-control p3" id="hsc_institute_name" placeholder="hsc institute name" required>
+             </div><br><br>
+             <div class="col-md-6">
+              <label for=""><b>HSC board</b></label>
+              <select  id="hsc_board" class="form-control p3">
+                  <option value="" selected>select a hsc board</option>
+                  <option value="CBSE">CBSE</option>
+                  <option value="ICSE">ICSE</option>
+                  <option value="state_board">State Board</option>
+                  <option value="Others">Others</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        </div>
+          <div class="form-group">
+              <div class="container">
+              <label for=""><b>Score In HSC in Percentage</b></label>
+              <input type="text" id="score_hsc" class="form-control col-md-12" placeholder="score in hsc in percentage e.g-78" required>
+          </div>
+         </div>
+          <div class="form-group">
+            <div class="container">
+            <div class="row">
+            <div class="col-md-6">
+              <label for=""><b>SSC Institution Name</b></label>
+              <input type="text" class="form-control p3" id="ssc_institute_name" placeholder="SSC Institution Name e.g-Orissa Council" required>
+            </div>
+            <div class="col-md-6">
+            <label for=""><b>SSC board</b></label>
+            <select  id="hsc_board" class="form-control p3" required>
+                <option value="" id="ssc_board" selected>select a ssc board</option>
+                <option value="CBSE">CBSE</option>
+                <option value="ICSE">ICSE</option>
+                <option value="state_board">State Board</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+    </div>
+          </div>
+          <div class="form-group">
+            <div class="container">
+            <label for=""><b>Score In SSC in Percentage</b></label>
+            <input type="text" id="score_ssc" class="form-control" placeholder="score in ssc in percentage e.g-89.67" required>
+        </div> 
+        </div>
+         <div class="form-group">
+             <div class="container">
+
+             <div class="row">
+                 <div class="col-md-6">
+             <label for=""><b>Currently Pursuing</b></label>
+             <input type="text" class="form-control p3" id="currently_pursue" placeholder="currently pursue e.g-B.TECH,B.SC,OTHER" required>
+            </div><br><br>
+            <div class="col-md-6">
+             <label for=""><b>Currently Educational institute Name</b></label>
+             <input type="text" class="form-control p3" id="educational_institute_name" placeholder="educational institute name e.g-Parla Maharaja Engineering College" required>
+         </div>
+        </div>
+        </div>
+       </div>
+         <div class="form-group">
+             <div class="container">
+             <label for=""><b>Overall Percentage</b></label>
+             <input type="text" class="form-control col-md-12" id="overall_percentage" placeholder="overall percentage e.g-78.90" required>
+         </div>
+        </div>
+         <div class="form-cgroup">
+             <div class="container">
+             <label for=""><b>Current Backlogs If Any</b></label>
+             <input type="text" class="form-control col-md-12" id="current_backlog" placeholder="Backlogs If Any e.g-0,1,2,.." required>
+         </div>
+        </div><br>
+         <div class="form-group">
+        <div class="container">
+         <button class="btn btn-success btn-lg btn-block" type="submit" name="next1">Next</button>
+        </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <script src="bootstrap-validate.js"></script>
+    <script>
+        bootstrapValidate('#hsc_institute_name','min:5: please enter atleast 5 character')
+        bootstrapValidate('#score_hsc','numeric: please enter only numeric value')
+        bootstrapValidate('#ssc_institute_name','min:5: please enter atleast 5 character')
+        bootstrapValidate('#score_ssc','numeric: please enter only numeric value')
+        bootstrapValidate('#currently_pursue','min:2: please enter atleast 2 character')
+        bootstrapValidate('#educational_institute_name','min:5: please enter atleast 2 character')
+        bootstrapValidate('#overall_percentage','numeric: please enter only numeric value')
+        bootstrapValidate('#current_backlog','numeric: please enter only numeric value')
+       
+    </script>
+  </body>
+</html>
+l
